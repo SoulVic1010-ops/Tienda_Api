@@ -1,9 +1,13 @@
 package com.example.tienda_api.InterfaceApi
 
+import com.example.tienda_api.Modelo.LoginRequest
+import com.example.tienda_api.Modelo.LoginResponse
 import com.example.tienda_api.Modelo.dataCategorias
 import com.example.tienda_api.Modelo.dataImagenesProducto
 import com.example.tienda_api.Modelo.dataProductos
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Query
 
 interface ApiService {
@@ -15,4 +19,7 @@ interface ApiService {
 
     @GET(value = "detalle_producto.php")
     suspend fun detalleProducto(@Query(value = "producto_id") productoId: Int): List<dataImagenesProducto>
+
+    @POST ("login.php")
+    suspend fun iniciarSesion(@Body request: LoginRequest): LoginResponse
 }

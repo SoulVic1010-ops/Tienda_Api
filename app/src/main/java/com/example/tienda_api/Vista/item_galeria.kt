@@ -1,10 +1,11 @@
-package com.example.tienda_api
+package com.example.tienda_api.Vista
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.tienda_api.R
 
 class item_galeria : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
